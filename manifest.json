@@ -1,0 +1,14 @@
+{
+"manifest_version": 2,
+    "name": "Git Pivot",
+    "description": "Replace pivotal tags in github with links to story",
+    "version": "1.0",
+    "content_scripts": [{
+      "matches": ["*://github.com/*"],
+            "js": ["content.js"]
+      }],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "permissions": ["*://github.com/*", "tabs", "webNavigation"]
+}
